@@ -7,10 +7,10 @@ def app(census_df):
     st.title("Census Visualisation Web App")
     st.subheader("This web app allows the user to explore and visualise the census data")
 
-    with st.expander("View Data"):
+    with st.beta_expander("View Data"):
         st.dataframe(census_df)
 
-    c1, c2, c3 = st.columns(3)
+    c1, c2, c3 = st.beta_columns(3)
     with c1:
         if st.checkbox("Display column names"):
             st.write(census_df.columns)
